@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "./SectionHeading";
 
 const features = [
@@ -92,6 +93,28 @@ export default function Authority() {
           subtitle="We blend artistry with precision to deliver lash experiences that exceed expectations."
           accentColor="gold"
         />
+
+        {/* Studio showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/studio/studio-interior.png"
+              alt="Lee Lee's Lashes studio interior"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="/studio/lash-application.png"
+              alt="Lash extension application in progress"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (

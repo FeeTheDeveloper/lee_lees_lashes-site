@@ -1,13 +1,23 @@
+import Image from "next/image";
 import Button from "./Button";
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[90vh] flex items-center justify-center pt-20"
+      className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #F7F1EE 0%, #E8CFC8 100%)",
       }}
     >
+      {/* Hero background image */}
+      <Image
+        src="/hero/hero-soft-glam.png"
+        alt=""
+        fill
+        className="object-cover opacity-15"
+        priority
+        sizes="100vw"
+      />
       {/* Subtle decorative element */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-white/10 blur-3xl pointer-events-none" />
 

@@ -1,9 +1,18 @@
+import Image from "next/image";
 import Button from "./Button";
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-blush/50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <section id="contact" className="relative py-20 md:py-28 bg-blush/50 overflow-hidden">
+      {/* Background detail image */}
+      <Image
+        src="/gallery/closeup-lash-detail.png"
+        alt=""
+        fill
+        className="object-cover opacity-10"
+        sizes="100vw"
+      />
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
         {/* Small gold accent */}
         <div className="w-10 h-0.5 bg-gold mx-auto mb-8" role="presentation" />
 

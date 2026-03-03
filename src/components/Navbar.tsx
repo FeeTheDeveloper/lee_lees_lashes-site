@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Button from "./Button";
 
 const navLinks = [
@@ -24,9 +25,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <span className="font-serif text-xl md:text-2xl text-brown font-bold tracking-wide">
-              Lee Lee&apos;s Lashes
-            </span>
+            <Image
+              src="/brand/lee-lees-lashes-logo.png"
+              alt="Lee Lee's Lashes logo"
+              width={140}
+              height={48}
+              className="h-10 md:h-12 w-auto"
+              priority
+            />
           </a>
 
           {/* Desktop Nav */}
